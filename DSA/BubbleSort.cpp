@@ -18,8 +18,10 @@ int main(){
             }
         }
     }
+    cout<<"Sorted array : ";
     for(int i : arr){
         cout<<i<<"  ";
     }
+    cout<<"\n";
     return 0;
 }
