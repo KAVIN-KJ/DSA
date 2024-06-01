@@ -6,18 +6,19 @@ struct node{
     node* next=nullptr;
 };
 
-void addnode(int data,node*& head){
+void addnode(int data,node* &head){
         node* newnode = new node();
         newnode->data = data;
         newnode->next = head;
         head = newnode;
 }
 
-void display(node* temp){
-    while(temp!=nullptr){
+void display(node* &temp){
+    while(temp!=NULL){
         cout<<temp->data<<" ";
         temp = temp->next;
     }
+    cout<<"\n";
     return;
 }
 
@@ -32,6 +33,11 @@ int main(){
         cin>>a;
         addnode(a,head);
     }
-    display(head);
+    try{
+        display(head);
+    }
+    catch(string e){
+        cout<<e;
+    }
     return 0;
 }
