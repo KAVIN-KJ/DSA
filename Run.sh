@@ -8,7 +8,7 @@ g++ -o a.out "$filename" -lstdc++
 ./a.out
 printf "\n\n\n"
 
-
+printf "End of Program"
 
 # g++ -o a.out input_file.cpp -lstdc++
 # ./a.out
