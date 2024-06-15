@@ -1,4 +1,4 @@
-> # "Working for my glorious purpose"
+> # "Working for my glorious purpose."
 
 
 
