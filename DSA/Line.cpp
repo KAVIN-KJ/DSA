@@ -3,13 +3,19 @@
 using namespace std;
 
 int main(){
-    int n=20;
+    cout<<"Enter Length : ";
+    int n;
+    cin>>n;
     string arr[n];
-    string str = "KAVIN RAJA";
+    cout<<"Enter String : ";
+    string str;
+    cin>>str;
+    cout<<"Enter Speed : ";
+    int speed;
+    cin>>speed;
     for(int i=0;i<n;i++){
         arr[i] = " . ";
     }
-    int speed = 100;
     for(int j=0;j<n;j++){
                 cout<<arr[j];
     }
