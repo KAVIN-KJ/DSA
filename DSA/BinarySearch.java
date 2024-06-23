@@ -4,6 +4,7 @@ public class BinarySearch{
         int arr[] = new int[1000000];
         for(int i=0;i<arr.length;i++){
             arr[i] = i;
+            
         }
         int index = binarySearch(arr,123);
         System.out.println("Found Target at index : " + index);

@@ -6,6 +6,7 @@ int main(){
     cin>>n;
     cout<<"Enter array elements separated with a space : ";
     int arr[n];
+    
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }

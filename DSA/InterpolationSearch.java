@@ -10,6 +10,7 @@ public class InterpolationSearch {
             System.out.println("Found At : "+index);
         }
         else System.out.println("Not Found");
+        
     }
 
     private static int interpolationSearch(int[] arr, int target) {

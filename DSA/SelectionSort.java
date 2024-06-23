@@ -5,6 +5,7 @@ public class SelectionSort {
         for(int i : arr){
             System.out.print(i+" ");
         }
+        
     }
 
     public static void sort(int[] arr){
