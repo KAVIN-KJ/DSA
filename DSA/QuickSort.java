@@ -15,21 +15,38 @@ private static void quickSort(int[] arr, int st, int nd) {
 }
 
 private static int partition(int[] arr, int st, int nd) {
-    int i=st-1;
+    // int i=st-1;
+    // int piv = nd;
+    // for(int j=st;j<nd;j++){
+    //     if(arr[j] < arr[piv]){
+    //         i++;
+    //         int temp = arr[j];
+    //         arr[j] = arr[i];
+    //         arr[i] = temp;
+    //     }
+    // }
+    // i++;
+    // int temp = arr[i];
+    // arr[i] = arr[piv];
+    // arr[piv] = temp;
+    // return i;
+
     int piv = nd;
-    for(int j=st;j<nd;j++){
-        if(arr[j] < arr[piv]){
-            i++;
-            int temp = arr[j];
-            arr[j] = arr[i];
+    int x=st-1;
+    for(int i=st;i<=nd;i++){
+        if(arr[i] < arr[piv]){
+            x++;
+            int temp = arr[x];
+            arr[x] = arr[i];
             arr[i] = temp;
         }
     }
-    i++;
-    int temp = arr[i];
-    arr[i] = arr[piv];
-    arr[piv] = temp;
-    return i;
+    x++;
+    int temp = arr[piv];
+    arr[piv] = arr[x];
+    arr[x] = temp;
+    return x;
+
 }
-    
+
 }
