@@ -24,6 +24,8 @@ public class JumpingFrog {
         if(i>1) doubleJump = findCost(i-2, arr) + Math.abs(arr[i] - arr[i-2]);
         return Math.min(singleJump,doubleJump);
     }
+
+    // MEMOIZATION
     private static int findCostMEM(int i,int[] arr, int[] dp) {
         if(i==0) return 0;
         if(dp[i]!=-1) return dp[i];
@@ -33,6 +35,7 @@ public class JumpingFrog {
         dp[i] = Math.min(singleJump, doubleJump);
         return dp[i];
     }
+    // TABULATION
     private static int findCostTAB(int[] arr){
         int dp[] = new int[arr.length];
         dp[0] = 0;
