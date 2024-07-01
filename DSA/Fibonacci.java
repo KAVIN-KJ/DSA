@@ -15,10 +15,9 @@ public class Fibonacci {
 
     public static int fib(int n,int[] dp){
         if(n<=1) return n;
-        if(dp[n] != -1) return dp[n];
+        if(dp[n]!=-1) return dp[n];
         dp[n] = fib(n-1,dp) + fib(n-2,dp);
         return dp[n];
-
     }
 
     // TABULATION
@@ -51,8 +50,8 @@ public class Fibonacci {
         // System.out.println(fib(n));
         int dp[] = new int[n+1];
         Arrays.fill(dp, -1);
-        System.out.println("DP : ");
-        System.out.println(fibe(n));
+        System.out.println("Memoization : ");
+        System.out.println(fib(n,dp));
 
     }
 }
