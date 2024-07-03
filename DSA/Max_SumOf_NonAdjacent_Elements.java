@@ -62,6 +62,7 @@ public class Max_SumOf_NonAdjacent_Elements {
         return dp[i] = Math.max(pick,n_pick);
     }
 
+
     private static int maxSumSpaceOpt(int arr[]){      // Space Optimized Function
         int prev = arr[0],prev2 = 0;
         for(int i=1;i<arr.length;i++){
