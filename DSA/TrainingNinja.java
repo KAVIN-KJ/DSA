@@ -75,6 +75,7 @@ private static int maxCredits(int[][] arr) {
             }
         }
         return maxPt;
+
     }
 
 // Memoized
