@@ -13,6 +13,7 @@ public class Unique_paths {
                 dp[i][j] = -1;
             }
         }
+        in.close();
         System.out.println(uniquePaths(m-1,n-1,dp));
         System.out.println(uniquePathsDP(m,n));
     }
