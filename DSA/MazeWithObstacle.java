@@ -20,7 +20,8 @@ public class MazeWithObstacle {
         int c = solveMazeTabulation(m,n,arr);
         System.out.println(a);
         System.out.println(b);
-        System.out.println(c);;
+        System.out.println(c);
+        in.close();
     }
 
 // TABULATION
