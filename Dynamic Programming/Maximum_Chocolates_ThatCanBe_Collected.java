@@ -15,6 +15,7 @@ public class Maximum_Chocolates_ThatCanBe_Collected {
         }
         int ans = maxCandy(0,0,n-1,arr);
         System.out.println(ans);
+        in.close();
     }
 
 
