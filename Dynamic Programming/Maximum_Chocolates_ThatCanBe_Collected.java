@@ -17,6 +17,9 @@ public class Maximum_Chocolates_ThatCanBe_Collected {
         System.out.println("Memoization : "+ans);
         ans = maxCandy(arr,dp);
         System.out.println("Tabulation : "+ans);
+        ans = maxCandy(0,0,n-1,arr);
+        System.out.println("Recursion : "+ans);
+
         in.close();
     }
 
@@ -54,7 +57,7 @@ public class Maximum_Chocolates_ThatCanBe_Collected {
     }
 
 
-// RECURSION
+// MEMOIZATION
     private static int maxCandy(int i, int j1, int j2, int[][] arr,int[][][]dp){
         if(j1<0||j1>=arr[0].length||j2<0||j2>=arr[0].length) return -1*Integer.MAX_VALUE;
         if(i==arr.length-1){
@@ -72,5 +75,28 @@ public class Maximum_Chocolates_ThatCanBe_Collected {
             }
         }
         return dp[i][j1][j2] = ans;
+    }
+
+    private static int maxCandy(int i,int j1,int j2,int[][] arr){
+        if(j1<0||j1>=arr[0].length||j2<0||j2>=arr[0].length) return Integer.MIN_VALUE;
+        if(i==arr.length-1){
+            if(j1==j2) return arr[i][j1];
+            else return arr[i][j1] + arr[i][j2];
+        }
+        int max = Integer.MIN_VALUE;
+        for(int d1=-1;d1<=1;d1++){
+            for(int d2=-1;d2<=1;d2++){
+                int newj1 = j1+d1;
+                int newj2 = j2+d2;
+                int val = Integer.MIN_VALUE;
+                if(j1==j2) val = arr[i][j1]+maxCandy(i+1,newj1,newj2,arr);
+                else{
+                    val= arr[i][j2]+arr[i][j1]+maxCandy(i+1,newj1,newj2,arr);
+                }
+                max = Math.max(val,max);
+
+            }
+        }
+        return max;
     }
 }
