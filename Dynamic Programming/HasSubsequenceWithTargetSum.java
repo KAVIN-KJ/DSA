@@ -26,6 +26,7 @@ public class HasSubsequenceWithTargetSum {
         System.out.println("Tabulated : "+hasSubseq(arr, target));
         System.out.println("Space Optimized : "+hasSubseq(arr, target, n));
         System.out.println("***********");
+        in.close();
     }
     }
 
