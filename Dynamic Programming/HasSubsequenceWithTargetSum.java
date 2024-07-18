@@ -26,8 +26,8 @@ public class HasSubsequenceWithTargetSum {
         System.out.println("Tabulated : "+hasSubseq(arr, target));
         System.out.println("Space Optimized : "+hasSubseq(arr, target, n));
         System.out.println("***********");
-        in.close();
     }
+    in.close();
     }
 
 // RECURSIVE
@@ -67,14 +67,11 @@ public class HasSubsequenceWithTargetSum {
         }
         for(int i=1;i<n;i++){
             for(int j=1;j<=trgt;j++){
-                boolean n_take = dp[i-1][j];
+                boolean not_take = dp[i-1][j];
                 boolean take = false;
-                if(arr[i]<=j){
-                    take = dp[i-1][j-arr[i]];
-                }
-                dp[i][j] = take||n_take;
+                if(arr[i]<=j) take = dp[i-1][j-arr[i]];
+                dp[i][j] = not_take||take;
             }
-
         }
         return dp[n-1][trgt];
     }
