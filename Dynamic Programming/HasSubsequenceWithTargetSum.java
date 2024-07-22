@@ -62,15 +62,14 @@ public class HasSubsequenceWithTargetSum {
         for(int i=0;i<n;i++){
             dp[i][0] = true;
         }
-        if(arr[0]<=trgt){
-            dp[0][arr[0]] = true;
-        }
+        if(arr[0]<=trgt) dp[0][arr[0]] = true;
+
         for(int i=1;i<n;i++){
             for(int j=1;j<=trgt;j++){
-                boolean not_take = dp[i-1][j];
+                boolean n_take = dp[i-1][trgt];
                 boolean take = false;
                 if(arr[i]<=j) take = dp[i-1][j-arr[i]];
-                dp[i][j] = not_take||take;
+                dp[i][j] = n_take||take;
             }
         }
         return dp[n-1][trgt];
