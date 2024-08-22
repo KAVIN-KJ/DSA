@@ -42,7 +42,7 @@ public class RatInMaze {
             findPaths(x+1, y, grid, s+"D", sol, visited, n);
         }
         visited[x][y] = 0;
-    }
+    }   
 
     public static void solve(int[][] grid){
         ArrayList<String> solution = new ArrayList<>();
