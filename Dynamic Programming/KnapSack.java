@@ -38,8 +38,9 @@ public class KnapSack {
     private static int solve(item[] arr, int cap) {
         int n = arr.length;
         int dp[][] = new int[n][cap+1];
-        for(int i=arr[0].wei;i<=cap;i++){
-            dp[0][i] = arr[0].val;
+        for(int i=0;i<=cap;i++){
+            if(arr[0].wei<=i)
+                dp[0][i] = arr[0].val;
         }
         for(int i=1;i<n;i++){
             for(int j=0;j<=cap;j++){
