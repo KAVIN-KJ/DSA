@@ -17,7 +17,7 @@ public class Unbounded_KnapSack {
         for (int i = 0; i < n; i++) {
             int w = in.nextInt();
             int v = in.nextInt();
-            items[i] = new item(w, v);  
+            items[i] = new item(w, v);      
         }
         System.out.println("Enter Capacity of the bag : ");
         int cap = in.nextInt();

@@ -16,6 +16,7 @@ public class MinimumCoins {
             int trgt = in.nextInt();
             System.out.println("Recursive : " + solve(arr, trgt, n - 1));
             System.out.println("Tabulated : " + solve(arr, trgt));
+            in.close(); 
         }
     }
 

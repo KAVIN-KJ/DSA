@@ -22,6 +22,7 @@ public class PartitionWithMinDiff {
             }
         }
         System.out.println(min);
+        in.close();
     }
 
     private static boolean solve(int[] arr, boolean[][] dp,int sum) {

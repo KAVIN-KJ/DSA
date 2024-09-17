@@ -1,4 +1,3 @@
-        import java.util.ArrayList;
         import java.util.Scanner;
 
         public class CoinChange_2 {
@@ -13,6 +12,7 @@
                 int trgt = in.nextInt();
                 System.out.println("Recursive : "+solve(n-1,arr,trgt));
                 System.out.println("Tabulated : "+solve(arr, trgt));
+                in.close();
             }
 
             private static int solve(int[] arr, int trgt) {
