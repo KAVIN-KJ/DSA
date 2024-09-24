@@ -6,6 +6,7 @@ public class MinimumInsertionsAndDeletions {
         String s1 = in.nextLine();
         String s2 = in.nextLine();
         System.out.println(solve(s1,s2));
+        in.close();
     }
 
     private static int solve(String s1, String s2) {

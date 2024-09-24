@@ -6,6 +6,7 @@ class MinimumInsertionsForPalindrome {
         Scanner in = new Scanner(System.in);
         String s = in.next();
         System.out.println(minInsertions(s));
+        in.close();
     }
     public static int minInsertions(String s) {
         int ans = lps(s);
