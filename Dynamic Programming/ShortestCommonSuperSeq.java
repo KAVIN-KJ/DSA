@@ -24,7 +24,7 @@ public class ShortestCommonSuperSeq {
                 i--;
                 j--;
             }
-            else if(dp[i-1][j] > dp[i][j-1]){
+            else if(dp[i-1][j]>dp[i][j-1]){
                 ans+=s1.charAt(i-1);
                 i--;
             }
@@ -37,10 +37,11 @@ public class ShortestCommonSuperSeq {
             ans+=s1.charAt(i-1);
             i--;
         }
-        while(j>0) {
+        while(j>0){
             ans+=s2.charAt(j-1);
             j--;
-        }
+        } 
+
         System.out.println(new StringBuilder(ans).reverse().toString());
         in.close();
     }
