@@ -28,4 +28,4 @@ class MinimumInsertionsForPalindrome {
         }
         return dp[n][n];
     }
-}
+}   
