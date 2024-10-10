@@ -11,6 +11,7 @@ public class ValidParenthesis {
         } else {
             System.out.println("Invalid");
         }
+        in.close();
     }
 
     private static boolean isValid(String expr) {

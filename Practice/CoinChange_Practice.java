@@ -11,6 +11,7 @@
             int trgt = in.nextInt();
             System.out.println(solve(n-1,arr,trgt));
             System.out.println(solve(arr, trgt));
+            in.close();
         }
 
         private static int solve(int[] arr, int trgt) {

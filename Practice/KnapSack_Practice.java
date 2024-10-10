@@ -25,6 +25,8 @@ public class KnapSack_Practice {
         }
         int cap = in.nextInt();
         System.out.println(solve(n - 1, arr, cap));
+        in.close();
+
     }
 
     private static int solve(int i, item[] arr, int cap) {

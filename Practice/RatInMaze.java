@@ -16,6 +16,7 @@ public class RatInMaze {
             }
         }
         solve(arr);
+        in.close();
 
     }
 

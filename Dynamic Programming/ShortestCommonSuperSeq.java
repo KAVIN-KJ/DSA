@@ -100,13 +100,13 @@ public class ShortestCommonSuperSeq {
                 j--;
             }
         }
-        while(j>0){
-            ans+=s2.charAt(j-1);
-            j--;
-        } 
         while(i>0) {
             ans+=s1.charAt(i-1);
             i--;
+        }
+        while(j>0) {
+            ans+=s2.charAt(j-1);
+            j--;
         }
         System.out.println(new StringBuilder(ans).reverse().toString());
     }

@@ -57,6 +57,7 @@ public class LC_Subsequence {
         String s1 = in.next();
         String s2 = in.next();
         solve(s1,s2);
+        in.close();
     }
 
     private static void solve(String s1, String s2) {
