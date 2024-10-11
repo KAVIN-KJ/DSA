@@ -11,6 +11,34 @@ public class MininumOpetations {
         in.close();
     }
 
+
+    public int solve_SpaceOptimized(String s1, String s2) {
+        int n = s1.length();
+        int m = s2.length();
+        int prev[] = new int[m+1];
+        int cur[] = new int[m+1];
+        for(int i=0;i<=m;i++){
+            prev[i] = i;
+        }
+        if(n==0) return m;
+        for(int i=1;i<=n;i++){
+            cur[0] = i;
+            for(int j=1;j<=m;j++){
+                if(s1.charAt(i-1)==s2.charAt(j-1)) cur[j] = prev[j-1];
+                else{
+                    int ins = cur[j-1];
+                    int del = prev[j];
+                    int rep = prev[j-1];
+                    cur[j] = 1 + Math.min(ins,Math.min(del,rep));
+                }
+            }
+            prev = cur.clone();
+        }
+        return cur[m];
+    }
+
+
+
     private static int solve(String s1,String s2){
         
         int n = s1.length();
