@@ -1,28 +1,32 @@
+/**
+ * BinarySearch
+ */
+import java.util.*;
 
-public class BinarySearch{
-    public static void main(String args[]){
-        int arr[] = new int[1000000];
-        for(int i=0;i<arr.length;i++){
-            arr[i] = i;
-            
-        }
-        int index = binarySearch(arr,123);
-        System.out.println("Found Target at index : " + index);
-    }
-
-    private static int binarySearch(int[] arr, int trgt) {
-        int low = 0;
-        int high = arr.length -1;
-        int mid=0,value=0;
-        while(low<=high){
-            mid = (low+high)/2;
-            value = arr[mid];
-            if(value>trgt){
-                high = mid-1;
+public class BinarySearch {
+    public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+            int n = in.nextInt();
+            int arr[] = new int[n];
+            for(int i=0;i<n;i++){
+                arr[i] = in.nextInt();
             }
-            else if(value<trgt) low = mid+1;
-            else return mid;
-        }
-        return -1;
-    }
+            int trgt = in.nextInt();
+            Arrays.sort(arr);
+            int lt = 0;
+            int rt = n-1;
+            in.close();
+            while(lt<=rt){
+                int mid = (lt+rt)/2;
+                int val = arr[mid];
+                if(trgt>val) lt = mid+1;
+                else if(trgt<val) rt = mid-1;
+                else {
+                    System.out.println("Found At "+mid);
+                    return;
+                }
+            }
+            System.out.println(lt+" "+rt);
+            System.out.println("Not found");
+    }    
 }

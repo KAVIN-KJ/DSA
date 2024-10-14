@@ -1,3 +1,7 @@
+
+
+// LEETCODE 72 - EDIT DISTANCE
+
 import java.util.*;
 public class MininumOpetations {
     public static void main(String[] args) {
@@ -40,7 +44,6 @@ public class MininumOpetations {
 
 
     private static int solve(String s1,String s2){
-        
         int n = s1.length();
         int m = s2.length();
         int dp[][] = new int[n+1][m+1];
@@ -57,7 +60,7 @@ public class MininumOpetations {
                     int ins = dp[i][j-1];
                     int del = dp[i-1][j];
                     int rep = dp[i-1][j-1];
-                    dp[i][j] = 1 + Math.min(ins,Math.min(del,rep));
+                    dp[i][j] = 1+Math.min(ins,Math.min(del,rep));
                 }
             }
         }
