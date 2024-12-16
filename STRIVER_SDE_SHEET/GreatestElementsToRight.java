@@ -22,5 +22,6 @@ public class GreatestElementsToRight {
         }
         for(int i : arr)
             System.out.print(i+" ");
+        in.close();
     }
 }

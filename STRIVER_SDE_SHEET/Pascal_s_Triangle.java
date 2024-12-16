@@ -1,7 +1,4 @@
 package STRIVER_SDE_SHEET;
-
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -27,6 +24,7 @@ public class Pascal_s_Triangle {
         System.out.println("Enter the size of the pascal's triangle : ");
         int n = in.nextInt();
         printPascal(n);
+        in.close();
 
     }
 
@@ -38,13 +36,13 @@ public class Pascal_s_Triangle {
     }
 
     private static void printRow(int r) {
-        int ans = 1;
-        System.out.print(ans + " ");
-        for (int i = 1; i < r; i++) {
-            ans *= (r - i);
-            ans /= i;
-            System.out.print(ans + " ");
-        }
+       int ans = 1;
+       System.out.print(ans+" ");
+       for(int i=1;i<r;i++){
+         ans = ans * (r-i);
+         ans = ans / i;
+         System.out.print(ans+" ");
+       }
     }
 
     private static int findncr(int n, int r) {

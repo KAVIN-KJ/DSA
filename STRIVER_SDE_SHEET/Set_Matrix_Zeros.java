@@ -33,5 +33,6 @@ public class Set_Matrix_Zeros {
             }
             System.out.println();
         }
+        in.close();
     }
 }
