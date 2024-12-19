@@ -29,5 +29,6 @@ public class Maximum_Sum_Subarray {
         for(int i=start;i<=end;i++){
             System.out.print(arr[i]+" ");
         }
+        in.close();
     }
 }
