@@ -43,5 +43,6 @@ public class Next_Permutation {
         for(int i=0;i<n;i++){
             System.out.print(arr[i]);
         }
+        in.close();
     }
 }
