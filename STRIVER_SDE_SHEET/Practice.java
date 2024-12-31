@@ -6,9 +6,17 @@ public class Practice {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int arr[] = new int[n];
-        for (int i = 0; i < n; i++)
-            arr[i] = in.nextInt();
+
+        int arr[][] = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = in.nextInt();
+            }
+        }
+
+        // int arr[] = new int[n];
+        // for (int i = 0; i < n; i++)
+        // arr[i] = in.nextInt();
 
         // 1. BUY AND SELL STOCK
         // System.out.println(buysellstock(arr, n));
@@ -32,29 +40,55 @@ public class Practice {
 
         // 6. SORT 0S, 1S AND 2S
 
-        dnfAlgorithm(arr);
-        for (int i : arr)
-            System.out.print(i + " ");
+        // dnfAlgorithm(arr);
+        // for (int i : arr)
+        // System.out.print(i + " ");
+
+        setMatrixZeros(arr, n);
 
         in.close();
+    }
+
+    private static void setMatrixZeros(int[][] arr, int n) {
+       int row[] = new int[n];
+       int col[] = new int[n];
+       for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(arr[i][j]==0){
+                row[i] = 1;
+                col[j] = 1;
+            }
+        }
+       }
+       for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(row[i]==1||col[j]==1) arr[i][j] = 0;
+        }
+       }
+       for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            System.out.print(arr[i][j]+" ");
+        }
+        System.out.println();
+       }
     }
 
     private static void dnfAlgorithm(int[] arr) {
         int low = 0;
         int mid = 0;
-        int high = arr.length-1;
-        while(mid<high){
-            if(arr[mid]==0){
+        int high = arr.length - 1;
+        while (mid < high) {
+            if (arr[mid] == 0) {
                 int temp = arr[low];
                 arr[low] = arr[mid];
                 arr[mid] = temp;
                 mid++;
                 low++;
             }
-            if(arr[mid]==1){
+            if (arr[mid] == 1) {
                 mid++;
             }
-            if(arr[mid]==2){
+            if (arr[mid] == 2) {
                 int temp = arr[high];
                 arr[high] = arr[mid];
                 arr[mid] = temp;
@@ -64,6 +98,7 @@ public class Practice {
     }
 
     private static int ncr(int n, int r) {
+
         int res = 1;
         for (int i = 0; i < r; i++) {
             res = res * (n - i);
