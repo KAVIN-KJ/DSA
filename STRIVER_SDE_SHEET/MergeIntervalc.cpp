@@ -7,8 +7,8 @@ vector<vector<int>> merge(vector<vector<int>>& arr) {
         for(int i=0;i<n;i++){
             int st = arr[i][0];
             int nd = arr[i][1];
-            if(ans.empty()|| st > ans.back()[1]){
-                ans.push_back(arr[i]);
+            if(ans.empty() || st > ans.back()[1]){
+                ans.push_back({st,nd});
             }
             else{
                 ans.back()[1] = max(ans.back()[1],nd);
