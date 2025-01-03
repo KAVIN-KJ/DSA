@@ -1,6 +1,19 @@
 {
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "FindDuplicate",
+            "request": "launch",
+            "mainClass": "FindDuplicate",
+            "projectName": "DSA_effe266a"
+        },
+        {
+            "type": "java",
+            "name": "MergeSortedArrays",
+            "request": "launch",
+            "mainClass": "STRIVER_SDE_SHEET.MergeSortedArrays",
+            "projectName": "DSA_effe266a"
+        },
         {
             "name": "C/C++: g++ build and debug active file",
             "type": "cppdbg",
