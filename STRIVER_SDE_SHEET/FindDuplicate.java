@@ -1,3 +1,4 @@
+package STRIVER_SDE_SHEET;
 import java.util.Scanner;
 
 public class FindDuplicate {
