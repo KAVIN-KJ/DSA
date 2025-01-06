@@ -3,11 +3,10 @@ using namespace std;
 vector<vector<int>> merge(vector<vector<int>>& arr) {
         vector<vector<int>> ans;
         int n = arr.size();
-        sort(arr.begin(),arr.end());
         for(int i=0;i<n;i++){
             int st = arr[i][0];
             int nd = arr[i][1];
-            if(ans.empty() || st > ans.back()[1]){
+            if(ans.empty() || ans.back()[1] < st ){
                 ans.push_back({st,nd});
             }
             else{
