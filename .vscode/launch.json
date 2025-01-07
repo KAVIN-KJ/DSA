@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MissingAndRepeatingNumber",
+            "request": "launch",
+            "mainClass": "STRIVER_SDE_SHEET.MissingAndRepeatingNumber",
+            "projectName": "DSA_effe266a"
+        },
+        {
+            "type": "java",
             "name": "FindMissingNumber",
             "request": "launch",
             "mainClass": "STRIVER_SDE_SHEET.FindMissingNumber",
