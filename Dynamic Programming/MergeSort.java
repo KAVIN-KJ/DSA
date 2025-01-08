@@ -1,6 +1,13 @@
+import java.util.*;
+
 public class MergeSort {
     public static void main(String[] args) {
-        int arr[] = { 8, 7, 3, 4, 6, 5, 1, 9, 2, 0 };
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = in.nextInt();
+        }
         mergeSort(arr);
         System.out.println();
         System.out.println();
@@ -12,60 +19,57 @@ public class MergeSort {
         System.out.println();
         System.out.println();
         System.out.println();
-
+        in.close();
     }
 
     private static void mergeSort(int[] arr) {
-        if (arr.length <= 1)
-            return;
-
-        int lts = arr.length / 2;
-        int rts = arr.length - lts;
-
+        if(arr.length<=1) return;
+        int n = arr.length;
+        int mid = n / 2;
+        int lts = n / 2;
+        int rts = n - lts;
         int ltarr[] = new int[lts];
         int rtarr[] = new int[rts];
-        int j = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (i < lts) {
+        int i = 0, r = 0;
+        for (; i < n; i++) {
+            if (i < mid)
                 ltarr[i] = arr[i];
-            } else {
-                rtarr[j] = arr[i];
-                j++;
+            else {
+                rtarr[r] = arr[i];
+                r++;
             }
         }
-
         mergeSort(ltarr);
         mergeSort(rtarr);
         merge(ltarr, rtarr, arr);
-
     }
 
-private static void merge(int[] ltarr, int[] rtarr, int[] arr) {
-    int lts = ltarr.length;
-    int rts = rtarr.length;
-    int i=0,l=0,r=0;
-    while(l<lts && r<rts){
-        if(ltarr[l]<rtarr[r]){
+    private static void merge(int[] ltarr, int[] rtarr, int[] arr) {
+        int l=0,r=0,i=0;
+        int lts = ltarr.length;
+        int rts = rtarr.length;
+        while(l<lts && r<rts){
+            if(ltarr[l] < rtarr[r]){
+                arr[i] = ltarr[l];
+                i++;
+                l++;
+            }
+            else{
+                arr[i] = rtarr[r];
+                i++;
+                r++;
+            }
+        }
+        while(l<lts){
             arr[i] = ltarr[l];
+            i++;
             l++;
-            i++;
         }
-        else{
+        while(r<rts){
             arr[i] = rtarr[r];
-            r++;
             i++;
+            r++;
         }
     }
-    while (l<lts) {
-        arr[i] = ltarr[l];
-        i++;
-        l++;
-    }
-    while(r<rts){
-        arr[i] = rtarr[r];
-        i++;
-        r++;
-    }
-}
 
 }
