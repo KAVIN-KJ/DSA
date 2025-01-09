@@ -1,4 +1,4 @@
-package STRIVER_SDE_SHEET;
+package Practice;
 
 import java.util.Scanner;
 
