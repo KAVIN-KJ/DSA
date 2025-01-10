@@ -13,7 +13,7 @@ public class PowX_N {
         while(nn>0){
             if(nn%2==1){
                 ans = ans * x;
-                nn -=1;
+                nn--;
             }
             else{
                 x *= x;
@@ -24,4 +24,5 @@ public class PowX_N {
         System.out.println(ans);
         in.close();
     }
+    
 }
