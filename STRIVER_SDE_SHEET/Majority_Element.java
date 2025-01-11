@@ -11,7 +11,7 @@ public class Majority_Element {
         int arr[] = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
-        }
+        }   
         int ans = solveByHashing(arr);
         System.out.println("Majority Element : " + ans);
         ans = MooresVotingAlgorithm(arr);
@@ -20,24 +20,42 @@ public class Majority_Element {
     }
 
     private static int MooresVotingAlgorithm(int[] nums) {
-        int n = nums.length;
+        // int n = nums.length;
+        // int el = nums[0];
+        // int cnt = 0;
+        // for(int i : nums){
+        //     if(cnt==0){
+        //         el = i;
+        //         cnt = 1;
+        //     }
+        //     else if(i==el) cnt++;
+        //     else cnt--;
+        // }
+        // int c = 0;
+        // for(int i : nums){
+        //     if(i==el){
+        //         c++;
+        //     }
+        // }
+        // return (c > n/2) ?  el : -1;
         int el = nums[0];
-        int cnt = 0;
+        int count = 0;
         for(int i : nums){
-            if(cnt==0){
+            if(count==0){
                 el = i;
-                cnt = 1;
+                count = 1;
             }
-            else if(i==el) cnt++;
-            else cnt--;
+            else if(i==el) count++;
+            else count--;
         }
-        int c = 0;
+        int c=0;
         for(int i : nums){
-            if(i==el){
+            if(el==i){
                 c++;
             }
         }
-        return (c > n/2) ?  el : -1;
+
+        return (c>nums.length/2) ? el : -1;
     }
 
     private static int solveByHashing(int[] arr) {
