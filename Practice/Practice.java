@@ -3,180 +3,157 @@ package Practice;
 import java.util.Scanner;
 
 public class Practice {
+    static int count = 0;
+
     public static void main(String[] args) {
+        int ans = 0;
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-
-        int arr[][] = new int[n][n];
+        int arr[] = new int[n];
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                arr[i][j] = in.nextInt();
-            }
+            arr[i] = in.nextInt();
         }
+        // ans = maxProfit(arr);
 
-        // int arr[] = new int[n];
-        // for (int i = 0; i < n; i++)
-        // arr[i] = in.nextInt();
+        count = 0;
+        // countInversions(arr);
 
-        // 1. BUY AND SELL STOCK
-        // System.out.println(buysellstock(arr, n));
+        // ans = findDuplicate(arr);
 
-        // 2. GT ELEMENT TO RIGHT
-        // gtElementToRight(arr, n);
+        // gtElementToRight(arr);
 
-        // 3. MAX SUM SUBARRAY
-        // int sum = maxSumSubarray(arr, n);
-        // System.out.println(sum);
+        // ans = majorityElement(arr);
 
-        // 4. NEXT PERMUTATION
+        // ans = maxSumSubarray(arr);
 
-        // nextPerm(arr);
+        
 
-        // 5. PASCAL'S TRIANGLE
-
-        // int a = ncr(6, 2);
-        // System.out.println(a);
-        // System.out.println();
-
-        // 6. SORT 0S, 1S AND 2S
-
-        // dnfAlgorithm(arr);
-        // for (int i : arr)
-        // System.out.print(i + " ");
-
-        setMatrixZeros(arr, n);
+        System.out.println(ans);
 
         in.close();
     }
 
-    private static void setMatrixZeros(int[][] arr, int n) {
-       int row[] = new int[n];
-       int col[] = new int[n];
-       for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            if(arr[i][j]==0){
-                row[i] = 1;
-                col[j] = 1;
-            }
-        }
-       }
-       for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            if(row[i]==1||col[j]==1) arr[i][j] = 0;
-        }
-       }
-       for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            System.out.print(arr[i][j]+" ");
-        }
-        System.out.println();
-       }
-    }
-
-    private static void dnfAlgorithm(int[] arr) {
-        int low = 0;
-        int mid = 0;
-        int high = arr.length - 1;
-        while (mid < high) {
-            if (arr[mid] == 0) {
-                int temp = arr[low];
-                arr[low] = arr[mid];
-                arr[mid] = temp;
-                mid++;
-                low++;
-            }
-            if (arr[mid] == 1) {
-                mid++;
-            }
-            if (arr[mid] == 2) {
-                int temp = arr[high];
-                arr[high] = arr[mid];
-                arr[mid] = temp;
-                high--;
-            }
-        }
-    }
-
-    private static int ncr(int n, int r) {
-
-        int res = 1;
-        for (int i = 0; i < r; i++) {
-            res = res * (n - i);
-            res = res / (i + 1);
-        }
-        return res;
-    }
-
-    private static void nextPerm(int[] arr) {
-        int n = arr.length;
-        int ind = -1;
-        for (int i = n - 2; i >= 0; i--) {
-            if (arr[i] < arr[i + 1]) {
-                ind = i;
-                break;
-            }
-        }
-        if (ind == -1) {
-            int lt = 0;
-            int rt = n - 1;
-            while (lt < rt) {
-                int temp = arr[lt];
-                arr[lt] = arr[rt];
-                arr[rt] = temp;
-                lt++;
-                rt--;
-            }
-            return;
-        }
-        for (int i = n - 1; i >= ind; i--) {
-            if (arr[i] > arr[ind]) {
-                int temp = arr[i];
-                arr[i] = arr[ind];
-                arr[ind] = temp;
-                break;
-            }
-        }
-        int lt = ind + 1;
-        int rt = n - 1;
-        while (lt < rt) {
-            int temp = arr[lt];
-            arr[lt] = arr[rt];
-            arr[rt] = temp;
-            lt++;
-            rt--;
-        }
-    }
-
-    private static int maxSumSubarray(int[] arr, int n) {
-        int sum = 0;
+    private static int maxSumSubarray(int[] arr) {
         int max = Integer.MIN_VALUE;
+        int sum = 0;
+        for(int i : arr){
+            sum += i;
+            if(sum > max) max = sum;
+            if(sum<0) sum = 0;
+        }
+        return (max>0) ? max : 0;
+    }
+
+    private static int majorityElement(int[] arr) {
+
+        int el = arr[0];
+        int cnt = 0;
+        for (int i : arr) {
+            if (cnt == 0) {
+                cnt++;
+                el = i;
+            } else if (i == el) {
+                cnt++;
+            } else
+                cnt--;
+        }
+        int c = 0;
+        for (int i : arr) {
+            if (i == el)
+                c++;
+        }
+        return (c > arr.length / 2) ? el : -1;
+    }
+
+    private static void gtElementToRight(int[] arr) {
+
+        int max = -1;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            int newmax = Math.max(arr[i], max);
+            arr[i] = max;
+            max = newmax;
+        }
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
+
+    private static int findDuplicate(int[] arr) {
+        int slow = arr[0];
+        int fast = arr[0];
+        do {
+            slow = arr[slow];
+            fast = arr[arr[fast]];
+        } while (slow != fast);
+        fast = arr[0];
+        while (slow != fast) {
+            slow = arr[slow];
+            fast = arr[fast];
+        }
+
+        return slow;
+    }
+
+    private static void countInversions(int[] arr) {
+        int n = arr.length;
+        if (n <= 1)
+            return;
+        int lts = arr.length / 2;
+        int ltarr[] = new int[lts];
+        int rtarr[] = new int[arr.length - lts];
+        int j = 0;
         for (int i = 0; i < n; i++) {
-            sum += arr[i];
-            max = Math.max(max, sum);
-            if (sum < 0)
-                sum = 0;
+            if (i < lts)
+                ltarr[i] = arr[i];
+            else {
+                rtarr[j] = arr[i];
+                j++;
+            }
         }
-        return max;
+        countInversions(ltarr);
+        countInversions(rtarr);
+        merge(ltarr, rtarr, arr);
+
     }
 
-    private static void gtElementToRight(int[] arr, int n) {
-        int gt = -1;
-        for (int i = n - 1; i >= 0; i--) {
-            int max = Math.max(arr[i], gt);
-            arr[i] = gt;
-            gt = max;
+    private static void merge(int[] ltarr, int[] rtarr, int[] arr) {
+        int n = arr.length;
+        int lts = arr.length / 2;
+        int rts = n - lts;
+        int i = 0, l = 0, r = 0;
+        while (l < lts && r < rts) {
+            if (ltarr[l] < rtarr[r]) {
+                arr[i] = ltarr[l];
+                l++;
+                i++;
+            } else {
+                arr[i] = rtarr[r];
+                count += (lts - l);
+                i++;
+                r++;
+            }
+        }
+        while (r < rts) {
+            arr[i] = rtarr[r];
+            i++;
+            r++;
+        }
+        while (l < lts) {
+            arr[i] = ltarr[l];
+            i++;
+            l++;
         }
     }
 
-    private static int buysellstock(int[] arr, int n) {
-        int maxprofit = Integer.MIN_VALUE;
+    private static int maxProfit(int[] arr) {
+        int n = arr.length;
         int min = arr[0];
+        int profit = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
-            maxprofit = Math.max(maxprofit, arr[i] - min);
+            profit = Math.max(profit, arr[i] - min);
             min = Math.min(min, arr[i]);
         }
-
-        return maxprofit;
+        return profit;
     }
 
 }

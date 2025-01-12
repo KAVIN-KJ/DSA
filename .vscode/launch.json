@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Practice",
+            "request": "launch",
+            "mainClass": "Practice.Practice",
+            "projectName": "DSA_effe266a"
+        },
+        {
+            "type": "java",
             "name": "Majority_Element",
             "request": "launch",
             "mainClass": "STRIVER_SDE_SHEET.Majority_Element",
