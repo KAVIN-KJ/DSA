@@ -9,13 +9,20 @@ public class Practice {
         int ans = 0;
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int arr[] = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = in.nextInt();
-        }
+        // int arr[] = new int[n];
+        // for (int i = 0; i < n; i++) {
+        // arr[i] = in.nextInt();
+        // }
         // ans = maxProfit(arr);
 
-        count = 0;
+        int m = in.nextInt();
+        int arr[][] = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = in.nextInt();
+            }
+        }
+        // count = 0;
         // countInversions(arr);
 
         // ans = findDuplicate(arr);
@@ -25,23 +32,45 @@ public class Practice {
         // ans = majorityElement(arr);
 
         // ans = maxSumSubarray(arr);
-
-        
+        int trgt = in.nextInt();
+        ans = searchMatrix(arr, trgt);
 
         System.out.println(ans);
 
         in.close();
     }
 
+    private static int searchMatrix(int[][] arr, int trgt) {
+        int low = 0;
+        int high = (arr.length * arr[0].length) -1;
+        while(low < high){
+            int mid = (low+high)/2;
+            int temp = arr[mid/arr[0].length][mid%arr[0].length];
+            if(temp < trgt){
+                low = mid+1;
+            }
+            else if(temp > trgt){
+                high = mid-1;
+            }
+            else{
+                return temp;
+            }
+        }
+
+        return -1;
+    }
+
     private static int maxSumSubarray(int[] arr) {
         int max = Integer.MIN_VALUE;
         int sum = 0;
-        for(int i : arr){
+        for (int i : arr) {
             sum += i;
-            if(sum > max) max = sum;
-            if(sum<0) sum = 0;
+            if (sum > max)
+                max = sum;
+            if (sum < 0)
+                sum = 0;
         }
-        return (max>0) ? max : 0;
+        return (max > 0) ? max : 0;
     }
 
     private static int majorityElement(int[] arr) {
