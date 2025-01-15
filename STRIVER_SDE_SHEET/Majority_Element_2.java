@@ -16,6 +16,7 @@ public class Majority_Element_2 {
         for (int i : ans) {
             System.out.print(i + " ");
         }
+        in.close();
     }
 
     private static ArrayList<Integer> mooresVotingAlgorithm(int[] arr) {
@@ -44,7 +45,7 @@ public class Majority_Element_2 {
         cnt1=0;
         cnt2=0;
         for(int i : arr){
-            if(i==el1) cnt1++;
+            if(i==el1) cnt1++;  
             if(i==el2) cnt2++;
         }
         if(cnt1>n/3) ans.add(el1);

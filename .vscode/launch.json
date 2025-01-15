@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UniquePaths",
+            "request": "launch",
+            "mainClass": "STRIVER_SDE_SHEET.UniquePaths",
+            "projectName": "DSA_effe266a"
+        },
+        {
+            "type": "java",
             "name": "Majority_Element_2",
             "request": "launch",
             "mainClass": "STRIVER_SDE_SHEET.Majority_Element_2",
