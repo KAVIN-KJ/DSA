@@ -1,5 +1,6 @@
 package Practice;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Practice {
@@ -9,19 +10,20 @@ public class Practice {
         int ans = 0;
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        // int arr[] = new int[n];
-        // for (int i = 0; i < n; i++) {
-        // arr[i] = in.nextInt();
-        // }
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = in.nextInt();
+        }
+
         // ans = maxProfit(arr);
 
-        int m = in.nextInt();
-        int arr[][] = new int[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                arr[i][j] = in.nextInt();
-            }
-        }
+        // int m = in.nextInt();
+        // int arr[][] = new int[n][m];
+        // for (int i = 0; i < n; i++) {
+        // for (int j = 0; j < m; j++) {
+        // arr[i][j] = in.nextInt();
+        // }
+        // }
         // count = 0;
         // countInversions(arr);
 
@@ -32,27 +34,44 @@ public class Practice {
         // ans = majorityElement(arr);
 
         // ans = maxSumSubarray(arr);
+        // int trgt = in.nextInt();
+        // ans = searchMatrix(arr, trgt);
         int trgt = in.nextInt();
-        ans = searchMatrix(arr, trgt);
-
-        System.out.println(ans);
+        for (int i : twosum(arr, trgt)) {
+            System.out.print(i);
+        }
+        // System.out.pri$ntln(ans);
 
         in.close();
     }
 
+    private static int[] twosum(int[] arr, int trgt) {
+       int[] ans = new int[2];
+       ans[0] = ans[1] = -1;
+       HashMap<Integer,Integer> mp = new HashMap<>();
+       for(int i=0;i<arr.length;i++){
+          int req = trgt - arr[i];
+          if(mp.containsKey(req)){
+             ans[0] = mp.get(req);
+             ans[1] = i;
+             return ans;
+          }
+          mp.put(arr[i],i);
+       }
+       return ans;
+    }
+
     private static int searchMatrix(int[][] arr, int trgt) {
         int low = 0;
-        int high = (arr.length * arr[0].length) -1;
-        while(low < high){
-            int mid = (low+high)/2;
-            int temp = arr[mid/arr[0].length][mid%arr[0].length];
-            if(temp < trgt){
-                low = mid+1;
-            }
-            else if(temp > trgt){
-                high = mid-1;
-            }
-            else{
+        int high = (arr.length * arr[0].length) - 1;
+        while (low < high) {
+            int mid = (low + high) / 2;
+            int temp = arr[mid / arr[0].length][mid % arr[0].length];
+            if (temp < trgt) {
+                low = mid + 1;
+            } else if (temp > trgt) {
+                high = mid - 1;
+            } else {
                 return temp;
             }
         }

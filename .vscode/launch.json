@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TwoSum",
+            "request": "launch",
+            "mainClass": "STRIVER_SDE_SHEET.TwoSum",
+            "projectName": "DSA_effe266a"
+        },
+        {
+            "type": "java",
+            "name": "ReversePairs",
+            "request": "launch",
+            "mainClass": "STRIVER_SDE_SHEET.ReversePairs",
+            "projectName": "DSA_effe266a"
+        },
+        {
+            "type": "java",
             "name": "UniquePaths",
             "request": "launch",
             "mainClass": "STRIVER_SDE_SHEET.UniquePaths",

@@ -1,74 +1,73 @@
 package STRIVER_SDE_SHEET;
-import java.util.*;
+// LC HAAARRDD !! 💥💥💥🗿🗿
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ReversePairs {
 
-    private static void merge(int[] arr, int low, int mid, int high) {
-        ArrayList<Integer> temp = new ArrayList<>(); // temporary array
-        int left = low;      // starting index of left half of arr
-        int right = mid + 1;   // starting index of right half of arr
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = in.nextInt();
+        }
+        int ans = countPairs(arr, 0, n - 1);
+        System.out.println(ans);
+        in.close();
 
-        //storing elements in the temporary array in a sorted manner//
+    }
 
-        while (left <= mid && right <= high) {
-            if (arr[left] <= arr[right]) {
-                temp.add(arr[left]);
-                left++;
+    private static int countPairs(int[] arr, int l, int h) {
+        int ans = 0;
+        if (l >= h)
+            return 0;
+        int mid = (l + h) / 2;
+        ans += countPairs(arr, l, mid);
+        ans += countPairs(arr, mid + 1, h);
+        ans += countInversions(arr, l, mid, h);
+        merge(arr, l, mid, h);
+        return ans;
+    }
+
+    private static int countInversions(int[] arr, int l, int mid, int h) {
+        int ans = 0;
+        int r = mid+1;
+        for(int i=l;i<=mid;i++){
+            while(r<=h && (long)arr[i] > (long)2*arr[r]){
+                r++;
+            }
+            ans += (r-(mid+1));
+        }
+        return ans;
+    }
+
+    private static void merge(int[] arr, int lo, int mid, int hi) {
+        ArrayList<Integer> al = new ArrayList<>();
+        int l = lo;
+        int r = mid + 1;
+        while (l <= mid && r <= hi) {
+            if (arr[l] <= arr[r]) {
+                al.add(arr[l]);
+                l++;
             } else {
-                temp.add(arr[right]);
-                right++;
+                al.add(arr[r]);
+                r++;
             }
         }
-
-        // if elements on the left half are still left //
-
-        while (left <= mid) {
-            temp.add(arr[left]);
-            left++;
+        while (l <= mid) {
+            al.add(arr[l]);
+            l++;
         }
-
-        //  if elements on the right half are still left //
-        while (right <= high) {
-            temp.add(arr[right]);
-            right++;
+        while (r <= hi) {
+            al.add(arr[r]);
+            r++;
         }
-
-        // transfering all elements from temporary to arr //
-        for (int i = low; i <= high; i++) {
-            arr[i] = temp.get(i - low);
+        int x = lo;
+        for (int i : al) {
+            arr[x] = i;
+            x++;
         }
-    }
-
-    public static int countPairs(int[] arr, int low, int mid, int high) {
-        int right = mid + 1;
-        int cnt = 0;
-        for (int i = low; i <= mid; i++) {
-            while (right <= high && arr[i] > 2 * arr[right]) right++;
-            cnt += (right - (mid + 1));
-        }
-        return cnt;
-    }
-
-    public static int mergeSort(int[] arr, int low, int high) {
-        int cnt = 0;
-        if (low >= high) return cnt;
-        int mid = (low + high) / 2 ;
-        cnt += mergeSort(arr, low, mid);  // left half
-        cnt += mergeSort(arr, mid + 1, high); // right half
-        cnt += countPairs(arr, low, mid, high); //Modification
-        merge(arr, low, mid, high);  // merging sorted halves
-        return cnt;
-    }
-
-    public static int team(int[] skill, int n) {
-        return mergeSort(skill, 0, n - 1);
-    }
-
-    public static void main(String[] args) {
-        int[] a = {4, 1, 2, 3, 1};
-        int n = 5;
-        int cnt = team(a, n);
-        System.out.println("The number of reverse pair is: " + cnt);
+        return;
     }
 }
-
