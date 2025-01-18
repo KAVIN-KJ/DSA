@@ -7,6 +7,7 @@ public class Practice {
     static int count = 0;
 
     public static void main(String[] args) {
+    @SuppressWarnings("unused")
         int ans = 0;
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -61,6 +62,7 @@ public class Practice {
        return ans;
     }
 
+    @SuppressWarnings("unused")
     private static int searchMatrix(int[][] arr, int trgt) {
         int low = 0;
         int high = (arr.length * arr[0].length) - 1;
@@ -78,6 +80,7 @@ public class Practice {
 
         return -1;
     }
+    @SuppressWarnings("unused")
 
     private static int maxSumSubarray(int[] arr) {
         int max = Integer.MIN_VALUE;
@@ -91,6 +94,7 @@ public class Practice {
         }
         return (max > 0) ? max : 0;
     }
+    @SuppressWarnings("unused")
 
     private static int majorityElement(int[] arr) {
 
@@ -112,6 +116,7 @@ public class Practice {
         }
         return (c > arr.length / 2) ? el : -1;
     }
+    @SuppressWarnings("unused")
 
     private static void gtElementToRight(int[] arr) {
 
@@ -125,6 +130,7 @@ public class Practice {
             System.out.print(i + " ");
         }
     }
+    @SuppressWarnings("unused")
 
     private static int findDuplicate(int[] arr) {
         int slow = arr[0];
@@ -141,6 +147,7 @@ public class Practice {
 
         return slow;
     }
+    @SuppressWarnings("unused")
 
     private static void countInversions(int[] arr) {
         int n = arr.length;
@@ -192,6 +199,7 @@ public class Practice {
             l++;
         }
     }
+    @SuppressWarnings("unused")
 
     private static int maxProfit(int[] arr) {
         int n = arr.length;

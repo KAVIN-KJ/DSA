@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ThreeSum",
+            "request": "launch",
+            "mainClass": "STRIVER_SDE_SHEET.ThreeSum",
+            "projectName": "DSA_effe266a"
+        },
+        {
+            "type": "java",
             "name": "TwoSum",
             "request": "launch",
             "mainClass": "STRIVER_SDE_SHEET.TwoSum",
