@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LongestConsecutiveSequence",
+            "request": "launch",
+            "mainClass": "STRIVER_SDE_SHEET.LongestConsecutiveSequence",
+            "projectName": "DSA_effe266a"
+        },
+        {
+            "type": "java",
             "name": "FourSum",
             "request": "launch",
             "mainClass": "STRIVER_SDE_SHEET.FourSum",
