@@ -1,13 +1,15 @@
 package Practice;
 
-import java.util.HashMap;
+import java.util.*;
 import java.util.Scanner;
+
+import STRIVER_SDE_SHEET.LongestConsecutiveSequence;
 
 public class Practice {
     static int count = 0;
 
     public static void main(String[] args) {
-    @SuppressWarnings("unused")
+        @SuppressWarnings("unused")
         int ans = 0;
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -37,29 +39,48 @@ public class Practice {
         // ans = maxSumSubarray(arr);
         // int trgt = in.nextInt();
         // ans = searchMatrix(arr, trgt);
-        int trgt = in.nextInt();
-        for (int i : twosum(arr, trgt)) {
-            System.out.print(i);
-        }
-        // System.out.pri$ntln(ans);
+        ans = longestConsecutiveSequence(arr);
+        // for (int i : twosum(arr, trgt)) {
+        // System.out.print(i);
+        // }
+        System.out.println(ans);
 
         in.close();
     }
+    @SuppressWarnings("unused")
+    private static int longestConsecutiveSequence(int[] arr) {
+        Arrays.sort(arr);
+        int ans = 0;
+        int prev = Integer.MIN_VALUE;
+        int curlen = 0;
+        for(int i : arr){
+            if(i-1==prev){
+                curlen++;
+            }
+            else if(i!=prev){
+                curlen = 1;
+            }
+            prev = i;
+            ans = Math.max(ans,curlen);
+        }
+        return ans;
+    }
 
+    @SuppressWarnings("unused")
     private static int[] twosum(int[] arr, int trgt) {
-       int[] ans = new int[2];
-       ans[0] = ans[1] = -1;
-       HashMap<Integer,Integer> mp = new HashMap<>();
-       for(int i=0;i<arr.length;i++){
-          int req = trgt - arr[i];
-          if(mp.containsKey(req)){
-             ans[0] = mp.get(req);
-             ans[1] = i;
-             return ans;
-          }
-          mp.put(arr[i],i);
-       }
-       return ans;
+        int[] ans = new int[2];
+        ans[0] = ans[1] = -1;
+        HashMap<Integer, Integer> mp = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            int req = trgt - arr[i];
+            if (mp.containsKey(req)) {
+                ans[0] = mp.get(req);
+                ans[1] = i;
+                return ans;
+            }
+            mp.put(arr[i], i);
+        }
+        return ans;
     }
 
     @SuppressWarnings("unused")
@@ -80,6 +101,7 @@ public class Practice {
 
         return -1;
     }
+
     @SuppressWarnings("unused")
 
     private static int maxSumSubarray(int[] arr) {
@@ -94,6 +116,7 @@ public class Practice {
         }
         return (max > 0) ? max : 0;
     }
+
     @SuppressWarnings("unused")
 
     private static int majorityElement(int[] arr) {
@@ -116,6 +139,7 @@ public class Practice {
         }
         return (c > arr.length / 2) ? el : -1;
     }
+
     @SuppressWarnings("unused")
 
     private static void gtElementToRight(int[] arr) {
@@ -130,6 +154,7 @@ public class Practice {
             System.out.print(i + " ");
         }
     }
+
     @SuppressWarnings("unused")
 
     private static int findDuplicate(int[] arr) {
@@ -147,6 +172,7 @@ public class Practice {
 
         return slow;
     }
+
     @SuppressWarnings("unused")
 
     private static void countInversions(int[] arr) {
@@ -199,6 +225,7 @@ public class Practice {
             l++;
         }
     }
+
     @SuppressWarnings("unused")
 
     private static int maxProfit(int[] arr) {

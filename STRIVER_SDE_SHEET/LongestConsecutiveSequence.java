@@ -12,6 +12,8 @@ public class LongestConsecutiveSequence {
         }
         int ans = solve(arr);
         System.out.println(ans);
+
+        in.close();
     }
 
     private static int solve(int[] arr) {
