@@ -3,48 +3,14 @@ package Practice;
 import java.util.*;
 import java.util.Scanner;
 
-import STRIVER_SDE_SHEET.LongestConsecutiveSequence;
 
 public class Practice {
     static int count = 0;
 
     public static void main(String[] args) {
         @SuppressWarnings("unused")
-        int ans = 0;
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int arr[] = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = in.nextInt();
-        }
-
-        // ans = maxProfit(arr);
-
-        // int m = in.nextInt();
-        // int arr[][] = new int[n][m];
-        // for (int i = 0; i < n; i++) {
-        // for (int j = 0; j < m; j++) {
-        // arr[i][j] = in.nextInt();
-        // }
-        // }
-        // count = 0;
-        // countInversions(arr);
-
-        // ans = findDuplicate(arr);
-
-        // gtElementToRight(arr);
-
-        // ans = majorityElement(arr);
-
-        // ans = maxSumSubarray(arr);
-        // int trgt = in.nextInt();
-        // ans = searchMatrix(arr, trgt);
-        ans = longestConsecutiveSequence(arr);
-        // for (int i : twosum(arr, trgt)) {
-        // System.out.print(i);
-        // }
-        System.out.println(ans);
-
+        
         in.close();
     }
     @SuppressWarnings("unused")
