@@ -1,5 +1,5 @@
 
-package Practice;
+// package Practice;
 import java.util.*;
 public class DistinctSubseq {
     public static void main(String[] args) {
