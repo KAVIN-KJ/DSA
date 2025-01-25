@@ -8,7 +8,8 @@ public class TrappingRainWater {
         int arr[] = new int[n];
         for(int i=0;i<n;i++){
             arr[i] = in.nextInt();
-        }   
+        }
+        in.close();
         int pfix[] = new int[n];
         int sfix[] = new int[n];
         pfix[0] = arr[0];

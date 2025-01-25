@@ -10,6 +10,7 @@ public class Fibonacci {
         for(int i=1;i<=n;i++){
             System.out.print(fibonacci(i)+" ");
         }
+        in.close(); 
     }
 
     private static int fibonacci(int n) {
