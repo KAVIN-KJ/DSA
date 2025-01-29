@@ -1,5 +1,5 @@
 // GIVEN AN N * N MATRIX ... RETURN THE ROTATED MATRIX BY 90 DEGREES
-package STRIVER_SDE_SHEET;
+package STRIVER_SDE_SHEET.Arrays;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package STRIVER_SDE_SHEET;
+package STRIVER_SDE_SHEET.Arrays;
 
 import java.util.ArrayList;
 import java.util.HashMap;
