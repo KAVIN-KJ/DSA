@@ -1,10 +1,8 @@
 package Linked_Lists;
 
+import Linked_Lists.*;
 import java.util.*;
-import Linked_Lists.LinkedList;
-
-public class ReverseList {
-
+public class MiddleOfTheList {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Node head = null;
@@ -16,18 +14,14 @@ public class ReverseList {
             head = newnode;
         }
         in.close();
-        Node temp = head;
-        while(temp!=null){
-            System.out.println(temp.data);
+        Node ans = LinkedList.middleOfTheList(head);
+        Node temp = LinkedList.reverseList(head);
+        System.out.println("Middle of the list :  "+ ans.data);
+        while (temp!=null) {
+            System.out.print(temp.data+" ");
             temp = temp.next;
         }
-        head = LinkedList.reverseList(head);
-        temp = head;
-        while(temp!=null){
-            System.out.println(temp.data);
-            temp = temp.next;
-        }
+        System.out.println();
     }
-
 
 }
