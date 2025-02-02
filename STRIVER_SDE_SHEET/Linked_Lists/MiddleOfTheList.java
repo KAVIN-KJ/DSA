@@ -1,6 +1,5 @@
 package Linked_Lists;
 
-import Linked_Lists.*;
 import java.util.*;
 public class MiddleOfTheList {
     public static void main(String[] args) {

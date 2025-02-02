@@ -1,7 +1,6 @@
 package Linked_Lists;
 
 import java.util.*;
-import Linked_Lists.LinkedList;
 
 public class ReverseList {
 
