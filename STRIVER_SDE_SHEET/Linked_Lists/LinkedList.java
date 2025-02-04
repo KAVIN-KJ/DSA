@@ -133,4 +133,30 @@ class Node {
         return ans.next;
     }
 
+    // INTERSECTION OF TWO LISTS
+
+    public static Node getIntersectionNode(Node headA, Node headB) {
+        if(headA==null || headB==null) return null;
+        Node l1 = headA;
+        Node l2 = headB;
+        while(l1!=l2){
+            l1 = (l1==null) ? headB : l1.next;
+            l1 = (l2==null) ? headA : l2.next;
+        }
+        return l1;
+    }
+
+    // HAS CYCLE ? 
+    public static boolean hasCycle(Node head) {
+        if(head==null || head.next==null) return false;
+        Node sl = head;
+        Node fs = head;
+       while(fs!=null && fs.next!=null){
+            fs = fs.next.next;
+            sl = sl.next;
+            if(sl == fs) return true;
+       }
+       return false;
+    }
+
 }
