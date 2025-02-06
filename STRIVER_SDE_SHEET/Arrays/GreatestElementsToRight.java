@@ -1,6 +1,6 @@
 // 1. Replace every element with the greatest element on right side
 
-package STRIVER_SDE_SHEET.Arrays;
+package Arrays;
 import java.util.*;
 public class GreatestElementsToRight {
     public static void main(String[] args) {
