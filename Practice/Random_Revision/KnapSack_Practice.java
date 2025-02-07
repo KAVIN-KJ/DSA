@@ -3,8 +3,6 @@ package Random_Revision;
 
 import java.util.*;
 
-import item;
-
 class item {
     int w;
     int v;

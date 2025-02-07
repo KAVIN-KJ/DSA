@@ -1,4 +1,4 @@
-package STRIVER_SDE_SHEET.Arrays;
+package Arrays;
 import java.util.Scanner;
 
 /*
