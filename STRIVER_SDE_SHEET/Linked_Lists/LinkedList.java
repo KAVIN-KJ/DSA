@@ -14,6 +14,18 @@ class Node {
     }
 }
 
+class Node2{
+    int data;
+    Node next;
+    Node bottom;
+    Node2(int n,Node nex,Node bot){
+        this.data = n;
+        this.next = nex; 
+        this.bottom = bot;
+    }
+}
+
+
 // LINKED LIST CLASS
 
 public class LinkedList {
@@ -194,6 +206,7 @@ public class LinkedList {
 
     static Node reverseByK(Node head, int k) {
         Node temp = head;
+        
         Node prevNode = null;
         while (temp != null) {
             Node kthNode = kth_element(temp, k);
@@ -240,5 +253,33 @@ public class LinkedList {
         reverseList(newhead);
         return true;
     }
+
+    // DETECT CYCLE IN A LIST
+
+    static Node detectCycle(Node head){
+        if(head==null) return null;
+        Node sl = head;
+        Node fs = head;
+        while(sl!=null && fs!=null && fs.next!=null){
+            sl = sl.next;
+            fs = fs.next.next;
+            if(sl==fs){
+                fs = head;
+                while(sl!=fs){
+                    sl = sl.next;
+                    fs = fs.next;
+                }
+                return fs;
+            }
+        }
+        return null;
+    }
+
+    // FLATTEN A LINKED LIST
+
+    static Node flattenList(Node2 head){
+        return null;
+    }
+
 }
 
