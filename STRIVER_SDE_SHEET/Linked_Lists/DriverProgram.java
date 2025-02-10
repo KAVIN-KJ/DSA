@@ -13,8 +13,10 @@ public class DriverProgram {
             Node newnode = new Node(x, head);
             head = newnode;
         }
-        in.close();
         head = LinkedList.reverseList(head);
-        System.out.println(LinkedList.isPalindrome(head));
+        in.close();
+        head = LinkedList.rotateRight(head,3);
+        LinkedList.display(head);
+        // System.out.println(LinkedList.isPalindrome(head));
     }
 }

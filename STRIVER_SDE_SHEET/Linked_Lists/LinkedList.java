@@ -1,5 +1,7 @@
 package Linked_Lists;
 
+import java.util.HashMap;
+
 class Node {
     int data;
     Node next;
@@ -14,17 +16,29 @@ class Node {
     }
 }
 
-class Node2{
+class Node2 {
     int data;
-    Node next;
-    Node bottom;
-    Node2(int n,Node nex,Node bot){
+    Node2 next;
+    Node2 bottom;
+
+    Node2(int n, Node2 nex, Node2 bot) {
         this.data = n;
-        this.next = nex; 
+        this.next = nex;
         this.bottom = bot;
     }
 }
 
+class Node3{
+    int data;
+    Node3 next;
+    Node3 random;
+
+    Node3(int n, Node3 nex, Node3 rand) {
+        this.data = n;
+        this.next = nex;
+        this.random = rand;
+    }
+}
 
 // LINKED LIST CLASS
 
@@ -35,7 +49,7 @@ public class LinkedList {
     static void display(Node head) {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data+" ");
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
     }
@@ -185,7 +199,7 @@ public class LinkedList {
             fs = fs.next.next;
             sl = sl.next;
             if (sl == fs)
-                return true;    
+                return true;
         }
         return false;
     }
@@ -206,12 +220,12 @@ public class LinkedList {
 
     static Node reverseByK(Node head, int k) {
         Node temp = head;
-        
+
         Node prevNode = null;
         while (temp != null) {
             Node kthNode = kth_element(temp, k);
             if (kthNode == null) {
-                if(prevNode!=null)
+                if (prevNode != null)
                     prevNode.next = temp;
                 break;
             }
@@ -232,18 +246,19 @@ public class LinkedList {
     // PALINDROMIC LIST OR NOT ?
 
     public static boolean isPalindrome(Node head) {
-        if(head==null || head.next==null) return true;
+        if (head == null || head.next == null)
+            return true;
         Node slow = head;
         Node fast = head;
-        while(fast.next!=null && fast.next.next!=null){
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
         Node newhead = reverseList(slow.next);
         Node l1 = head;
         Node l2 = newhead;
-        while(l2!=null){
-            if(l1.data!=l2.data){
+        while (l2 != null) {
+            if (l1.data != l2.data) {
                 reverseList(newhead);
                 return false;
             }
@@ -256,16 +271,17 @@ public class LinkedList {
 
     // DETECT CYCLE IN A LIST
 
-    static Node detectCycle(Node head){
-        if(head==null) return null;
+    static Node detectCycle(Node head) {
+        if (head == null)
+            return null;
         Node sl = head;
         Node fs = head;
-        while(sl!=null && fs!=null && fs.next!=null){
+        while (sl != null && fs != null && fs.next != null) {
             sl = sl.next;
             fs = fs.next.next;
-            if(sl==fs){
+            if (sl == fs) {
                 fs = head;
-                while(sl!=fs){
+                while (sl != fs) {
                     sl = sl.next;
                     fs = fs.next;
                 }
@@ -275,11 +291,116 @@ public class LinkedList {
         return null;
     }
 
-    // FLATTEN A LINKED LIST
+    // MERGE TWO NODE2
 
-    static Node flattenList(Node2 head){
-        return null;
+    static Node2 merge(Node2 a, Node2 b) {
+
+        Node2 temp = new Node2(0, null, null);
+        Node2 res = temp;
+        while (a != null && b != null) {
+            if (a.data < b.data) {
+                temp.bottom = a;
+                a = a.bottom;
+                temp = temp.bottom;
+            } else {
+                temp.bottom = b;
+                b = b.bottom;
+                temp = temp.bottom;
+            }
+        }
+        if (a != null)
+            temp.bottom = a;
+        else
+            temp.bottom = b;
+        return res.bottom;
+
+    }
+
+    // FLATTEN A LINKED LIST
+    // LINK TO PROBLEM -> https://www.geeksforgeeks.org/problems/flattening-a-linked-list/1
+
+    static Node2 flattenList(Node2 root) {
+        // code here
+        if (root == null || root.next == null) {
+            return root;
+        }
+        root.next = flattenList(root.next);
+        return root = merge(root, root.next);
+    }
+
+    // ROTATE A LINKED LIST
+
+    static Node rotateRight(Node head, int k) {
+        int len = 1;
+        Node temp = head;
+        if(head==null) return null;
+        while(temp!=null && temp.next!=null){
+            temp = temp.next;
+            len++;
+        }
+        k%=len;
+        temp.next = head;
+        temp = head;
+        for(int i=0;i<len-k-1&&temp!=null;i++){
+            temp = temp.next;
+        }
+        head = temp.next;
+        temp.next = null;
+        return head;
+    }
+
+    // COPY LIST WITH RANDOM POINTERS - HASHMAP APPROACH
+
+    // LINK TO PROBLEM -> https://leetcode.com/problems/copy-list-with-random-pointer/description/
+
+    static Node3 copyRandomList(Node3 head) {
+        HashMap<Node3,Node3> map = new HashMap<>();
+        Node3 temp = head;
+        while(temp!=null){
+            map.put(temp,new Node3(temp.data,null,null));
+            temp = temp.next;
+        }
+        temp = head;
+        while(temp!=null){
+            Node3 newnode = map.get(temp);
+            newnode.next = map.get(temp.next);
+            newnode.random = map.get(temp.random);
+
+            temp = temp.next;
+        }
+        return map.get(head);
+    }
+
+    // COPY LIST WITH RANDOM POINTERS - OPTIMAL APPROACH
+
+    static Node3 copyRandomListOptimal(Node3 head){
+        
+        Node3 temp = head;
+        while(temp!=null){
+            Node3 copy = new Node3(temp.data,null,null);
+            copy.next = temp.next;
+            temp.next = copy;
+            temp = temp.next.next;
+        }
+
+        temp = head;
+        while(temp!=null){
+            Node3 copy = temp.next;
+            if(temp.random==null) copy.random = null;
+            else copy.random = temp.random.next;
+            temp = temp.next.next;
+        }
+        temp = head;
+        Node3 dummy = new Node3(-1, head, temp);
+        Node3 res = dummy;
+        while(temp!=null){
+            res.next = temp.next;
+            res = res.next;
+            temp.next = temp.next.next;
+            temp = temp.next;
+        }
+        
+        return dummy.next;
     }
 
 }
-
