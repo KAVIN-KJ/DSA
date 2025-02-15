@@ -28,7 +28,7 @@ public class UniqueSubsets {
                 if(i>ind && arr[i]==arr[i-1]) continue;
                 curr.add(arr[i]);
                 uniqueSubsets(i+1,arr,ans,curr);
-            curr.remove(curr.size()-1);
+                curr.remove(curr.size()-1);
         }
     }
 }
