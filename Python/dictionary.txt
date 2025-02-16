@@ -1,0 +1,1 @@
+{"name": "KJKR", "age": 20, "Department": "ECE", "College": "SKCT", "Reg_No": "727822tuec104","Favorite_language":"Python}

@@ -1,0 +1,4 @@
+🔥 Your Turn!1️⃣ Write a Python script that creates a file called numbers.txt and writes numbers from 1 to 10, each on a new line
+.2️⃣ Read and print all numbers from numbers.txt.Once you’re done, we move to OOP (Classes & Objects)! 🚀
+
+this content is being appended to the text file !!ASDHFLKSHFLSDHLFSHFLJSDHFLHSDFLSDHFLDKSHFGKLDSFHGKR XD

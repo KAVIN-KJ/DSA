@@ -20,7 +20,7 @@ int main(){
     // for(int i=0;i<sizeof(car)/sizeof(car[0]);i++){
     //     printf("%s\n",car[i]);
     // }
-   
+    
     int arr[] = {5,6,8,9,7,2,1,3,4,5,6};
     int n = sizeof(arr)/sizeof(arr[0]);
     for(int i=0;i<n;i++){
