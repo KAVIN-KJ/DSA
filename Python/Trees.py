@@ -10,6 +10,19 @@ class Node:
         self.data = val
 
 
+def levelOrder(root):
+    que = list()
+    que.append(root)
+    while(que):
+        for i in range(0,len(que)):
+            curr = que.pop(0)
+            print(curr.data,end=" ")
+            if curr.left is not None: que.append(curr.left)
+            if curr.right is not None: que.append(curr.right)
+        print()
+                    
+
+
 def insert(root,val):
     if(root==None):
         return Node(val)
@@ -35,3 +48,5 @@ while True:
     root = insert(root,x)
 
 display(root)
+print()
+levelOrder(root)
