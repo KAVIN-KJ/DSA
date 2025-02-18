@@ -1,3 +1,22 @@
-KJKR
-AJ
-NSK
+hey I don't know what did I download but here's the folder structure : 
+KITTI_Dataset
+    |---val
+        |---2011_10_03_drive_0047_sync
+        |        |---proj_depth
+        |                 |---velodyne_raw
+        |                         |---image_03
+        |                         |---image_02
+        |---2011_09_30_drive_0016_sync
+        |---and 11 more folders like the above ..
+                                
+    |---train
+        |---2011_10_03_drive_0047_sync
+            |        |---proj_depth
+            |                 |---velodyne_raw
+            |                         |---image_03
+            |                         |---image_02
+            |---2011_09_30_drive_0016_sync
+            |---and 136 more filders like above....
+
+what's this and I have downloaded only this dataset .. i mean there's nothing other than images.
+also the images looks like they are just black background but if looked closer, it actually consists of white spots something like a scanned pattern
