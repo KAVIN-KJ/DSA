@@ -12,6 +12,6 @@ public:
             x=x/10;
         }
         num2 = num2/10;
-        return(num1==num2 ? true : false);
+        return(num1==num2);
     }
 };

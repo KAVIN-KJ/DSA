@@ -13,9 +13,6 @@ public class ClimbingStairs {
         long arr[] = new long[n+1];
         Arrays.fill(arr,-1);
         System.out.println(countStairs(n,arr));
-        
-
-
         in.close();
     }
 
