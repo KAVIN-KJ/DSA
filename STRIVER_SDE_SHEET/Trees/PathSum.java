@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 class TreeNode {
+    public TreeNode(int i) {
+    }
     int val;
     TreeNode left = null;
     TreeNode right = null;
