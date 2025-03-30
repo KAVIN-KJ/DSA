@@ -1,3 +1,5 @@
+package Trees;
+
 public class MaximumPathSum {
     public int maxPathSum(TreeNode root) {
         int[] maxi = new int[]{(int)-1e9};

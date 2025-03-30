@@ -1,4 +1,4 @@
-// package Trees;
+package Trees;
 
 import java.util.*;
 
@@ -6,6 +6,7 @@ import java.util.*;
 class Node {
     int data;
     Node left, right;
+    public Node next;
 
     public Node(int val) {
         data = val;

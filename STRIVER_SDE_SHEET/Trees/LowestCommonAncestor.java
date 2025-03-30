@@ -1,3 +1,5 @@
+
+package Trees;
 public class LowestCommonAncestor {
 
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
