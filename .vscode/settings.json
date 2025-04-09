@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "regex": "cpp"
     },
     "java.debug.settings.onBuildFailureProceed": true
 }
