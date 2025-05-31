@@ -2,6 +2,34 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "LongestConsecutiveSubseqence",
+            "request": "launch",
+            "mainClass": "LongestConsecutiveSubseqence",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "ProductOfArrayExceptSelf",
+            "request": "launch",
+            "mainClass": "ProductOfArrayExceptSelf",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "EncodeAndDecodeStrings",
+            "request": "launch",
+            "mainClass": "EncodeAndDecodeStrings",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "TopKFrequentElements",
+            "request": "launch",
+            "mainClass": "TopKFrequentElements",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
             "name": "Debug C++",
             "type": "cppdbg",
             "request": "launch",
