@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ValidPalindrome",
+            "request": "launch",
+            "mainClass": "ValidPalindrome",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "LongestConsecutiveSubseqence",
             "request": "launch",
             "mainClass": "LongestConsecutiveSubseqence",
