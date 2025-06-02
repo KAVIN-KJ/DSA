@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Container_With_MostWater",
+            "request": "launch",
+            "mainClass": "Container_With_MostWater",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "ValidPalindrome",
             "request": "launch",
             "mainClass": "ValidPalindrome",
