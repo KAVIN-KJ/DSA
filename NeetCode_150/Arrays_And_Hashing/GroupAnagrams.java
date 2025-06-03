@@ -1,6 +1,7 @@
 import java.util.*;
 
-class Solution {
+public class GroupAnagrams {
+    
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String,List<String>> mpp = new HashMap<>();
         for(String s: strs){
@@ -14,10 +15,6 @@ class Solution {
         }
         return new ArrayList<>(mpp.values());
     }
-}
-
-public class GroupAnagrams {
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -25,7 +22,7 @@ public class GroupAnagrams {
         String arr[] = new String[n];
         for(int i = 0;i<n;i++)
             arr[i] = in.nextLine();
-        List<List<String>> ans = Solution.groupAnagrams(arr);
+        List<List<String>> ans = groupAnagrams(arr);
         for(List<String> ls : ans){
             for(String str : ls){
                 System.out.print(str+" ");
