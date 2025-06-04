@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Permutation_In_String",
+            "request": "launch",
+            "mainClass": "NeetCode_150.Sliding_Window.Permutation_In_String",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "Trapping_Rainwater",
             "request": "launch",
             "mainClass": "Trapping_Rainwater",

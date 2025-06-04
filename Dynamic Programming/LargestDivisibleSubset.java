@@ -41,6 +41,7 @@ public class LargestDivisibleSubset {
         return ans;
     }
 // ALWAYS PASS IN THE SORTED ARRAY
+    @SuppressWarnings("unused")
     private List<Integer> recursive(int[] nums, int prevIndex, int currIndex) {
         if (currIndex == nums.length) {
             return new ArrayList<>();
