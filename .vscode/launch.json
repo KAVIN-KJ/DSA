@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BookIssueing",
+            "request": "launch",
+            "mainClass": "Zoho_Level_3_Practice.BookIssueing",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "ATM",
+            "request": "launch",
+            "mainClass": "Zoho_Level_3_Practice.ATM",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "Permutation_In_String",
             "request": "launch",
             "mainClass": "NeetCode_150.Sliding_Window.Permutation_In_String",
