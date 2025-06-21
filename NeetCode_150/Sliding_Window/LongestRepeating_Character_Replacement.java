@@ -1,4 +1,3 @@
-package NeetCode_150.Sliding_Window;
 
 public class LongestRepeating_Character_Replacement {
      public int characterReplacement(String s, int k) {

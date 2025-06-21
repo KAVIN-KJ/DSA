@@ -1,4 +1,3 @@
-package NeetCode_150.Sliding_Window;
 
 import java.util.Arrays;
 import java.util.Scanner;
