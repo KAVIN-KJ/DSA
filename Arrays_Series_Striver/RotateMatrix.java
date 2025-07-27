@@ -1,5 +1,14 @@
 package Arrays_Series_Striver;
 
+/*
+ * 
+IMPORTANT TIP :
+    90 = transpose + reverse row
+    180 = reverse row + reverse column
+    270 = transpose + reverse col
+ */
+
+
 public class RotateMatrix {
     public void rotate(int[][] arr) {
         int n = arr.length;
