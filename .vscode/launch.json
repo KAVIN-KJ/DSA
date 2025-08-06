@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MergeSort",
+            "request": "launch",
+            "mainClass": "Arrays_Series_Striver.MergeSort",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "FindSecondLargestElement",
             "request": "launch",
             "mainClass": "Arrays_Series_Striver.FindSecondLargestElement",
