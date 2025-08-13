@@ -1,0 +1,178 @@
+.
+├── ARRAYS
+│   ├── BuyAndSellStonks.java
+│   ├── CheckIfArrayIsSorted.java
+│   ├── CountInversions.java
+│   ├── CountSubarraysSumK.java
+│   ├── CountSubarraysWithXorK.java
+│   ├── FindDuplicate.java
+│   ├── FindSecondLargestElement.java
+│   ├── FourSum.java
+│   ├── IntersectionOfTwoArrays.java
+│   ├── LeadersInArray.java
+│   ├── LongestConsecutiveSequence.java
+│   ├── LongestRepeatingNonOverlapping.java
+│   ├── LongestSubarrayWithSumK.java
+│   ├── MajorityElement1.java
+│   ├── MajorityElement2.java
+│   ├── MaxConsecOnes.java
+│   ├── MaxProductSubarray.java
+│   ├── MaxSumSubarray.java
+│   ├── MergeIntervals.java
+│   ├── MergeSortedArrays.java
+│   ├── MergeSort.java
+│   ├── MissingAndRepeating.java
+│   ├── MissingNumber.java
+│   ├── MoveZeros.java
+│   ├── NextPermutation.java
+│   ├── PascalsTriangle.java
+│   ├── RearrangeBySigns.java
+│   ├── RemoveDuplicates.java
+│   ├── ReversePairs.java
+│   ├── RotateArray.java
+│   ├── RotateMatrix.java
+│   ├── SearchAMatrix.java
+│   ├── SetMatrixZeros.java
+│   ├── SortColours.java
+│   ├── SortedSquares.java
+│   ├── SpiralMatrix.java
+│   ├── ThreeSum.java
+│   └── UniquePaths.java
+├── Dynamic Programming
+│   ├── BinarySearch.java
+│   ├── BinaryTree.cpp
+│   ├── BrainPower.java
+│   ├── BubbleSort.cpp
+│   ├── CanPartitionWithEqualSum.java
+│   ├── Check Palindrome.cpp
+│   ├── ClimbingStairs.java
+│   ├── CoinChange_2.java
+│   ├── Count Digits.cpp
+│   ├── CountPowerFulIntegers.java
+│   ├── CountSubsets.java
+│   ├── DistinctSubsequences.java
+│   ├── Fibonacci.java
+│   ├── Frog_Jump_2.java
+│   ├── Graph_AdjacencyList.java
+│   ├── HasSubsequenceWithTargetSum.java
+│   ├── House_Robber.java
+│   ├── InsertionSort.java
+│   ├── InterpolationSearch.java
+│   ├── JumpingFrog.java
+│   ├── KnapSack.java
+│   ├── LargestDivisibleSubset.java
+│   ├── LC_Subsequence.java
+│   ├── Line.cpp
+│   ├── linkedlist.cpp
+│   ├── LongestCommonSubstring.java
+│   ├── LongestPalindromic_Subseq.java
+│   ├── Maximum_Chocolates_ThatCanBe_Collected.java
+│   ├── Maximum_Sum_Subarray.java
+│   ├── Max_Path_Sum.java
+│   ├── Max_SumOf_NonAdjacent_Elements.java
+│   ├── MazeWithObstacle.java
+│   ├── MergeSort.java
+│   ├── MinimumCoins.java
+│   ├── MinimumInsertionsAndDeletions.java
+│   ├── MinimumInsertionsForPalindrome.java
+│   ├── Minimum_Path_Sum.java
+│   ├── MininumOpetations.java
+│   ├── PartitionWithMinDiff.java
+│   ├── Perfect_Sum.java
+│   ├── PivotIndex.java
+│   ├── Practice.java
+│   ├── printGfg.cpp
+│   ├── PrintLCSubSequence.java
+│   ├── Print No Without Loop.java
+│   ├── Print_Subsequences.java
+│   ├── Print_Subsequences_With_Sum_K.java
+│   ├── QuickSort.java
+│   ├── Reverse a Number.cpp
+│   ├── Rod_Cutting_Problem.java
+│   ├── SelectionSort.java
+│   ├── ShortestCommonSuperSeq.java
+│   ├── TrainingNinja.java
+│   ├── Triangular_Array_MinCost.java
+│   ├── Unbounded_KnapSack.java
+│   └── Unique_paths.java
+├── Facilio Round 2
+│   ├── DecodeString.java
+│   ├── JumpGame.java
+│   ├── LRUCache.java
+│   ├── RemoveDuplicates.java
+│   └── WordSearch.java
+├── Graphs
+│   ├── Count_Islands.java
+│   ├── Count_Provinces.java
+│   ├── Detect_Cycles_Graph.java
+│   ├── Detect_Cycles_IN_Grid.java
+│   ├── Flood_Fill.java
+│   ├── MaxArea_Of_An_Island.java
+│   ├── PathWithLengthAtleast_K.java
+│   └── Rotting_Oranges.java
+├── NeetCode_150
+│   ├── Arrays_And_Hashing
+│   ├── Sliding_Window
+│   ├── Stacks
+│   └── Two_Pointers
+├── Practice
+│   ├── Amazon
+│   ├── C_Practice
+│   ├── MrCooper
+│   ├── Random_Revision
+│   └── Zoho_Level_3_Practice
+├── Python
+│   ├── Class.py
+│   ├── Compiler.py
+│   ├── data.txt
+│   ├── Dictionaries.py
+│   ├── dictionary.txt
+│   ├── Files.py
+│   ├── Functions.py
+│   ├── Hello.py
+│   ├── ifelif.py
+│   ├── Lists.py
+│   ├── Loops.py
+│   ├── newfile.txt
+│   ├── Queues.py
+│   ├── Sets.py
+│   ├── Stacks.py
+│   └── Trees.py
+├── Run.sh
+├── solved_problems.txt
+├── STRIVER_SDE_SHEET
+│   ├── Arrays_and_Hashing
+│   ├── BackTracking
+│   ├── Graphs
+│   ├── GreedyAlgorithms
+│   ├── Linked_Lists
+│   ├── Recursion
+│   ├── Stacks
+│   └── Trees
+├── Verilog_Programming
+│   ├── and.v
+│   ├── a.out
+│   ├── FullAdder.v
+│   ├── FullSubtractor.v
+│   ├── HalfSubtractor.v
+│   ├── MUX16x1.v
+│   ├── MUX2x1.v
+│   ├── MUX4x1.v
+│   ├── MUX8x1.v
+│   ├── nand.v
+│   ├── nor.v
+│   ├── or.v
+│   ├── output.vcd
+│   ├── outputwave.vcd
+│   ├── RippleCarryAdder.v
+│   └── xor.v
+└── Zoho Level 2
+    ├── BinaryOnes.java
+    ├── BinarySearch.java
+    ├── BuyAndSellStocks.java
+    ├── Dictionary.java
+    ├── ElaraTheExplora.java
+    ├── Hello.java
+    └── IsSubseq.java
+
+28 directories, 148 files
