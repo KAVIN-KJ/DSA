@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ValidIPAddress",
+            "request": "launch",
+            "mainClass": "STRINGS.ValidIPAddress",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "MergeSort",
             "request": "launch",
             "mainClass": "Arrays_Series_Striver.MergeSort",
