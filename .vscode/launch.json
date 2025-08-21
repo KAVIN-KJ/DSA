@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Random_Revision.Builder.Main",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "FactoryDesignPattern",
+            "request": "launch",
+            "mainClass": "Random_Revision.FactoryDesignPattern",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "SingletonPattern",
+            "request": "launch",
+            "mainClass": "Random_Revision.SingletonPattern",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "ValidIPAddress",
             "request": "launch",
             "mainClass": "STRINGS.ValidIPAddress",
