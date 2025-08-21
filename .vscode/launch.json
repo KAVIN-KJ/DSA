@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AdapterPattern",
+            "request": "launch",
+            "mainClass": "Random_Revision.AdapterPattern",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "Youtube",
+            "request": "launch",
+            "mainClass": "Random_Revision.Observer.Youtube",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Random_Revision.Builder.Main",
