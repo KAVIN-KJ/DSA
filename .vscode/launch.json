@@ -3,6 +3,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BalancedParenthesesGenerate",
+            "request": "launch",
+            "mainClass": "ZohoPractice.BalancedParenthesesGenerate",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "StringPermutations",
+            "request": "launch",
+            "mainClass": "ZohoPractice.StringPermutations",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "SudokuSolver",
+            "request": "launch",
+            "mainClass": "ZohoPractice.SudokuSolver",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
+            "name": "NQueens",
+            "request": "launch",
+            "mainClass": "ZohoPractice.NQueens",
+            "projectName": "DSA_c1492e6a"
+        },
+        {
+            "type": "java",
             "name": "AdapterPattern",
             "request": "launch",
             "mainClass": "Random_Revision.AdapterPattern",

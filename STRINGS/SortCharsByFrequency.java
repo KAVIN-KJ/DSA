@@ -18,4 +18,4 @@ public class SortCharsByFrequency {
         }
         return sb.toString();
     }
-}
+} 
