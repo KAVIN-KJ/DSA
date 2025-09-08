@@ -3,7 +3,11 @@
         "ostream": "cpp",
         "sstream": "cpp",
         "regex": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "chrono": "cpp",
+        "text_encoding": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp"
     },
     "java.debug.settings.onBuildFailureProceed": true
 }
